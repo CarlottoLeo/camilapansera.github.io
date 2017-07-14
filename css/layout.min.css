@@ -3,6 +3,50 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+ @keyframes carousel{
+     0%    { left:0; }
+     11%   { left:0; }
+     12.5% { left:-100%; }
+     23.5% { left:-100%; }
+     25%   { left:-200%; }
+     36%   { left:-200%; }
+     37.5% { left:-300%; }
+     48.5% { left:-300%; }
+     50%   { left:-400%; }
+     61%   { left:-400%; }
+     62.5% { left:-300%; }
+     73.5% { left:-300%; }
+     75%   { left:-200%; }
+     86%   { left:-200%; }
+     87.5% { left:-100%; }
+     98.5% { left:-100%; }
+     100%  { left:0; }
+     /* daqui: http://csswizardry.com/2011/10/fully-fluid-responsive-css-carousel/ */
+ }
+ @keyframes go{
+     0%    {  }
+     100%    { left:-300%; }
+ }
+ @keyframes back{
+     0%    { left:0; }
+     100%  { left:100%; }
+ }
+ .carousel{
+     width:100%;
+     overflow:hidden;
+     height:100%;}
+ .paineis{
+     width:500% /* article w * 5 */;
+     overflow:hidden;
+     height:100%;
+     animation:carousel 30s infinite; position:relative;}
+ article{
+     float:left;
+     width:20%;}
+ img{
+     height:100%;
+     width:100%}
+ input[type=checkbox]:checked ~ .paineis{animation-play-state:paused; animation: go 10s}
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
@@ -94,7 +138,7 @@ header .intro-text .skills {
 }
 @media (min-width: 768px) {
   header .container {
-    padding-top: 160px;
+    padding-top: 105px;
     padding-bottom: 100px;
   }
   header .intro-text .name {
@@ -189,7 +233,7 @@ header .intro-text .skills {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 0px 0;
 }
 section h2 {
   margin: 0;
